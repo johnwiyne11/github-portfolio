@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio 📚</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="chill.jpeg" type="image/x-icon">
+    <style>
+        
+        .menu {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .menu-icon {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 24px;
+            width: 30px;
+        }
+
+        .menu-icon div {
+            height: 4px;
+            background-color: black;
+            border-radius: 2px;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 30px;
+            right: 0;
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .dropdown a {
+            text-decoration: none;
+            color: black;
+            padding: 5px 0;
+            display: block;
+        }
+
+        .menu.active .dropdown {
+            display: block;
+        }
+        #about {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .circle-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #ccc; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .circle-image img {
+            width: 115%;
+            height: 115%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu" onclick="toggleMenu()">
+        <div class="menu-icon">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="dropdown">
+            <a href="Minardo.html">John Wiyne Minardo</a>
+            <a href="Obradas.html">Justine Obradas</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+
+ 
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <div class="circle-image">&gt;
+                <img src="chill.jpeg" alt="About Us Image">
+            </div>
+            <div>
+                <h1>About Us</h1>
+                <p>Hi! We are students of Cebu Eastern College, taking the course BSIT (Bachelor of Science in Information Technology).</p>
+            </div>
+        </section>
+        <section id="blog">
+            <h1>Blog</h1>
+            <article>
+                <h2>Our Favorite Programming Languages</h2>
+                <p>🔍 We love programming in HTML, C++, and CSS.</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/HD13eq_Pmp8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                    <h1>
+                        This is where we study
+                    </h1>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15698.482106265524!2d123.8943!3d10.3157!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x339e32c7bf4bfeb7%3A0xabae95d2e909e573!2s7VVW%2BQC%20Cebu%20City%2C%20Cebu!5e0!3m2!1sen!2sph!4v1617701260123!5m2!1sen!2sph" width="600" "="" height="450" frameborder="0" allowfullscreen="" loading="lazy"></iframe>
+            </article>
+        </section>
+        <section id="contact">
+            <h1>Contact Us</h1>
+            <form action="/submit" method="post">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" placeholder="Your Name" required=""><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="Your Email" required=""><br><br>
+
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="5" placeholder="Your Message" required=""></textarea><br><br>
+
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 Cebu Eastern College Students. All rights reserved.</p>
+    </footer>
+
+
+</body></html>
